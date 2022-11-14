@@ -1,20 +1,14 @@
-const util = require("util")
-const fs = require("fs")
+const util = require("util");
+const fs = require("fs");
 const router = require("express").Router();
 //const uuidv1 = require("uuid/v1")
 //const readFileAsync = util.promisify(fs.readFile)
 //const writeFileAsync = util.promisify(fs.writeFile)
 
-
 router.get("/notes", function (req, res) {
-  router.get("/notes", function (req, res) {
-    let parsedData= util.promisify.apply(fs.readFile("../db/db.json", "utf8"))
-    console.log(parsedData)
-      res.json(parsedData);
-  });
-  
-        console.log(parsedData)
-    res.json();
+  let parsedData = util.promisify.apply(fs.readFile("../db/db.json", "utf8"));
+  console.log(parsedData);
+  res.json(parsedData);
 });
 
 router.post("/notes", function (req, res) {
