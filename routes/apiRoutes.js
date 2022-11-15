@@ -1,14 +1,16 @@
 const util = require("util");
 const fs = require("fs");
 const router = require("express").Router();
-
+// sets up note to the json file
 function readNotes() {
   const notes = fs.readFileSync("db/db.json", "utf-8");
   return JSON.parse(notes);
 }
+// stringifys notes
 function writeNotes(notes) {
   fs.writeFileSync("db/db.json", JSON.stringify(notes));
 }
+// makes a random id
 function generateId() {
   return Math.random();
 }

@@ -1,3 +1,5 @@
+
+//sets up routes for the info to the html files
 const path = require("path");
 const router = require("express").Router();
 
