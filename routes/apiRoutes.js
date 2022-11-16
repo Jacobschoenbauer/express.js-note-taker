@@ -14,12 +14,13 @@ function writeNotes(notes) {
 function generateId() {
   return Math.random();
 }
+// reads data
 router.get("/notes", function (req, res) {
   const notes = readNotes();
   res.json(notes);
 
 });
-
+// creates data
 router.post("/notes", function (req, res) {
   const notes = readNotes();
   let newNote = req.body;
@@ -28,7 +29,7 @@ router.post("/notes", function (req, res) {
   writeNotes(notes);
   res.json(newNote);
 });
-
+// deletes data
 router.delete("/notes/:id", function (req, res) {
   const notes = readNotes();
   console.log(notes);
