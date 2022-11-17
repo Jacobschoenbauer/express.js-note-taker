@@ -10,6 +10,8 @@
  I click on the Save icon the new note I have entered is saved and appears in the left-hand column with the other existing notes.
  I can click on an existing note in the list in the left-hand column
  
+ ## Picture
+![img](Screenshot%202022-11-17%20111519.png)
  ## github
  https://github.com/Jacobschoenbauer/express.js-note-taker
 
